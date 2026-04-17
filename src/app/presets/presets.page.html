@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Presets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Presets</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <br>
+  <ion-button (click)="addTask()">Add Task</ion-button>
+  <br>
+  <ion-item *ngFor="let task of tasks">
+  <ion-checkbox slot="start"></ion-checkbox>
+  <ion-label>{{task.title}}</ion-label>
+  </ion-item>
+  <br>
+</ion-content>
