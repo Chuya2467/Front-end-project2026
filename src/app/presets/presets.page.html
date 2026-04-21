@@ -18,7 +18,7 @@
   <ion-button (click)="addTask()">Add Task</ion-button>
   <br>
   <ion-item *ngFor="let task of tasks">
-  <ion-checkbox slot="start"></ion-checkbox>
+  <ion-checkbox slot="start" (ionChange)="toggleTask(task, $event)"></ion-checkbox>
   <ion-label>{{task.title}}</ion-label>
   </ion-item>
   <br>

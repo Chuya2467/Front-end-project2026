@@ -15,7 +15,7 @@
   </ion-header>
 
   <br>
-  <ion-input placeholder="Enter task"></ion-input>
+  <ion-input placeholder="Enter task" [(ngModel)]="newTaskTitle" value=""></ion-input>
   <ion-button (click)="addTask()">Add Task</ion-button>
   
   <ion-button [routerLink] = "['/presets']">View presets</ion-button>
