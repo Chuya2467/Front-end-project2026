@@ -16,10 +16,10 @@
   <p *ngIf="tasks.length === 0">List is empty</p>
 
   <ion-list *ngIf="tasks.length > 0">
-    <ion-item *ngFor="let task of tasks">
-      <ion-checkbox slot="start" [(ngModel)]="task.completed">
+    <ion-item *ngFor="let task of tasks; let i = index">
+      <ion-checkbox slot="start" [(ngModel)]="task.completed" (ionChange)="updateTasks()"></ion-checkbox>
         <ion-label>{{ task.title }}</ion-label>
-      </ion-checkbox>
+        <ion-button (click)="deleteTask(i)">Delete</ion-button>
     </ion-item>
   </ion-list>
   <ion-button [routerLink] = "['/add-task']">+ add new task</ion-button>

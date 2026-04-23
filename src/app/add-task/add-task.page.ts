@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButtons, IonButton, IonInput } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-import { LocalNotifications } from '@capacitor/local-notifications';
 import { Storage } from '@ionic/storage-angular';
 
 @Component({
@@ -45,7 +44,7 @@ export class AddTaskPage implements OnInit {
   }
 
   async ngOnInit() {
-    await LocalNotifications.requestPermissions();
+    
   }
 
 }
